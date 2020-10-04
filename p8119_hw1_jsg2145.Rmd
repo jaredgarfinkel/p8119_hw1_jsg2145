@@ -25,3 +25,106 @@ scale_fill_discrete = scale_fill_viridis_d
 theme_set(theme_minimal() + theme(legend.position = "bottom"))
 ```
 
+```{r}
+tibble("Chapter" = c(2,3,4), "Problems" = c("4, 5, 6, 8", "1, 2, 4, 10", "1, 2, 3, 7, 8, 11, 12"))
+```
+
+# Chapter 2
+
+## Problem 4
+
+How many genotypes are possible with a 3-allele marker? With K alleles?
+
+There are 3 alleles in a genotype, so they can take the form 1, 2, and 3. Each offspring can inherit one allele from each parent.
+
+By hand, the possible genotypes are (1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3). There are 6 possible genotypes.
+
+For K alleles, the number of possible genotypes is the sum of n from n = 1 to K.
+
+Number of genotypes = $$\Sigma_{n=1}^{K}n$$
+
+## Problem 5
+
+Given:
+
+Pr(Y = 1 | any variant) = 1
+Pr(no variant) ~ 1
+Pr(early onset AD) = 0.001
+Pr(any variant | AD) = 0.07
+
+Find:
+
+Pr(disease | no variant) = Pr(AD | no variant)
+
+Bayes Rule:
+
+P(A|B) = $\frac{P(B|A)P(A)}{P(B)}$
+
+$$\frac{Pr(no~variant~|~AD)~*~Pr(AD)}{Pr(no~variant)}$$
+
+Pr(no variant | AD) = 1 - Pr(any variant | AD) = 1 - 0.07 = 0.93
+
+0.93 x 0.001 / 1 = 0.00093
+
+## Problem 6
+
+a) The probability of a random person being affected is the prevalence = 0.000001. If the person is affected, the sibling of 
+
+that person is more likely to have it, but the probability of the sibling being affected is still quite low.
+
+b) Given: 
+
+Pr(disease | 2 variants) = 1/2
+Pr(phenocopy) = 0
+
+The probability of a person having the disease who is selected at random remains the same. However, the chances of the sibling having 
+
+the disease is even lower than before although still greater than the background probability of disease, since the genotype associated 
+
+with the disease only produces the disease phenotype in 1/2 of those with 2 variants.
+
+## Problem 8
+
+Penetrance functions allow for differences in mean and variance as a function of genotype.
+
+# Chapter 3
+
+## Problem 1
+
+p = $$\frac{2n_{AA}+n_{Aa}}{2n}$$
+
+var(p) = $$\frac{pq}{2n}$$
+
+## Problem 2
+
+Given:
+
+Pr(sickle cell anemia | dd) = 1
+
+Pr(sickle cell anemia) = 0.01 = Pr(dd) = $q^2$
+
+Pr(d) = ?
+
+Using:
+
+$q = \sqrt{q^2}~=~\sqrt{0.01}~=~0.1$
+
+## Problem 4
+
+In a population with minor allele frequency, p, and population N, a rare recessive disease would be expected in $N*p^2$ individuals.
+
+If there is an inbreeding coefficient of F, the number affected by the disease would be calculated from the equation:
+
+$$F*p~+~(1~-~F)*p^2$$
+
+Given:
+
+p = 0.0001
+
+N = 10^6
+
+F = 0.2
+
+Assuming p is the probability of the recessive allele, the expected number of indiviuals with this disease will be $0.2*0.0001+(1-0.2)*0.0001^2$
+
+= `r 0.2*0.0001+0.8*0.0001^2` ~ 0.00002
