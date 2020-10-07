@@ -128,3 +128,95 @@ F = 0.2
 Assuming p is the probability of the recessive allele, the expected number of indiviuals with this disease will be $0.2*0.0001+(1-0.2)*0.0001^2$
 
 = `r 0.2*0.0001+0.8*0.0001^2` ~ 0.00002
+
+## Problem 10
+
+Prove:
+
+var(X) = 2pq + var($p_k$)
+
+By definition:
+
+p = $$\sum_{k}s_kp_k$$
+
+Using:
+
+Pr(X=0) = p(aa) = $$\sum_{k}s_{k}q_{k}^{2}$$ 
+
+= 1 - 2p + E[$p_k^2$] - $p^2$ + $p^2$ = $q^2$ + var($p_k$)
+
+Pr(X=1) = P(Aa) = $$2\sum_{k}s_kp_kq_k$$ 
+
+= 2p - 2E[$p_k^2$] + 2$p^2$ - 2$p^2$ = 2pq - 2var($p_k$)
+
+Pr(X=2) = P(AA) = $$\sum_{k}s_kp_k^2$$ 
+
+= E[$p_k^2$] - $p^2$ + $p^2$ = $p^2$ + var($p_k$)
+
+Therefore:
+
+E[X] = 0 * ($q^2$ + var($p_k$)) + 1 * (2pq - 2var($p_k$)) + 2 * ($p^2$ + var($p_k$)) = 2$p^2$ + 2pq = 2p
+
+Var(X) = E[$X^2$] - $E[X]^2$ = 0 * ($q^2$ + var($p_k$)) + 1 * (2pq - 2var($p_k$)) + 4 * ($p^2$ + var($p_k$)) - $E[X]^2$
+
+Var(X) = 2pq + 2 var($p_k$)
+
+# Chapter 4
+
+## Problem 1
+
+$$\lambda_s = \frac{P(Y_1~=~1, Y_2~=~1)}{P(Y_1~=~1)^2}$$
+
+$P(Y_1 = 1)$ = $(1-p)^4$
+
+$P(dd, dd) = \frac{\frac{1}{16}4p^2(1-p)^2+\frac{1}{4}4p(1-p)^3+(1-p)^4}{(1-p)^4}$
+
+$P(dd, dd) = \frac{1}{4}p^2 - p + 1 = (\frac{1}{2}p - 1)^2$
+
+## Problem 2
+
+$Cov(Y_1, Y_2) = P(Y_1 = Y_2 = 1) - K^2$
+
+$P(Y_1 = Y_2 = 1) - K^2 = P(Y_1 = 1, Y_2 = 1) - [f_0(1-p)^2 + f_12p(1-p) + f_2p^2]^2$
+
+$P(Y_1 = 1, Y_2 = 1) = P(Y_1 = 1)P(Y_2 = 1)$
+
+## Problem 3
+
+We might expect dizygotic twins to have the same recurrence risk as siblings, because they 
+
+are genetically unique. However, they share the same conditions in the womb and this may contribute
+
+to the observed relative risk in dizygotic twins bigger than that for siblings.
+
+## Problem 4
+
+## Problem 7
+
+## Problem 8
+
+## Problem 11
+
+a) At least one parent had the dominant allele.
+
+b) Autosomal dominant traits can skip a generation if the parents are both heterozygous.
+
+c) The children of two parents with autosomal recessive traits will have the recessive trait.
+
+d) An autosomal recessive trait cannot skip a generation unless one of the parents has the dominant trait.
+
+e) The children will inherit at least one recessive allele from that parent.
+
+## Problem 12
+
+Pedigree A: dominant, not recessive because 7 and 8 would have all recessive offspring.
+
+Pedigree B: recessive, not dominant, because 3 and 4 would have homozygotic offspring since a dominant allele will cause disease in all carriers, and neither parent is a carrier in 3 and 4.
+
+Pedigree C: recessive, not dominant, because carriers would have the disease and thus 3 and 4 would be monozygotic.
+
+Pedigree D: dominant or recessive
+
+Pedigree E: recessive, not dominant, because 13 and 14 would have no recessive dominant allele to pass to 20.
+
+Pedigree F: neither, because 3 and 4 would have all recessive alleles in the recessive model, while 6 and 7 would have all recessive alleles in the dominant model.

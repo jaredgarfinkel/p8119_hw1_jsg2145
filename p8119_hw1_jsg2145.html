@@ -445,6 +445,74 @@ summary {
 <p>Assuming p is the probability of the recessive allele, the expected number of indiviuals with this disease will be <span class="math inline">\(0.2*0.0001+(1-0.2)*0.0001^2\)</span></p>
 <p>= 2.000810^{-5} ~ 0.00002</p>
 </div>
+<div id="problem-10" class="section level2">
+<h2>Problem 10</h2>
+<p>Prove:</p>
+<p>var(X) = 2pq + var(<span class="math inline">\(p_k\)</span>)</p>
+<p>By definition:</p>
+<p>p = <span class="math display">\[\sum_{k}s_kp_k\]</span></p>
+<p>Using:</p>
+<p>Pr(X=0) = p(aa) = <span class="math display">\[\sum_{k}s_{k}q_{k}^{2}\]</span></p>
+<p>= 1 - 2p + E[<span class="math inline">\(p_k^2\)</span>] - <span class="math inline">\(p^2\)</span> + <span class="math inline">\(p^2\)</span> = <span class="math inline">\(q^2\)</span> + var(<span class="math inline">\(p_k\)</span>)</p>
+<p>Pr(X=1) = P(Aa) = <span class="math display">\[2\sum_{k}s_kp_kq_k\]</span></p>
+<p>= 2p - 2E[<span class="math inline">\(p_k^2\)</span>] + 2<span class="math inline">\(p^2\)</span> - 2<span class="math inline">\(p^2\)</span> = 2pq - 2var(<span class="math inline">\(p_k\)</span>)</p>
+<p>Pr(X=2) = P(AA) = <span class="math display">\[\sum_{k}s_kp_k^2\]</span></p>
+<p>= E[<span class="math inline">\(p_k^2\)</span>] - <span class="math inline">\(p^2\)</span> + <span class="math inline">\(p^2\)</span> = <span class="math inline">\(p^2\)</span> + var(<span class="math inline">\(p_k\)</span>)</p>
+<p>Therefore:</p>
+<p>E[X] = 0 * (<span class="math inline">\(q^2\)</span> + var(<span class="math inline">\(p_k\)</span>)) + 1 * (2pq - 2var(<span class="math inline">\(p_k\)</span>)) + 2 * (<span class="math inline">\(p^2\)</span> + var(<span class="math inline">\(p_k\)</span>)) = 2<span class="math inline">\(p^2\)</span> + 2pq = 2p</p>
+<p>Var(X) = E[<span class="math inline">\(X^2\)</span>] - <span class="math inline">\(E[X]^2\)</span> = 0 * (<span class="math inline">\(q^2\)</span> + var(<span class="math inline">\(p_k\)</span>)) + 1 * (2pq - 2var(<span class="math inline">\(p_k\)</span>)) + 4 * (<span class="math inline">\(p^2\)</span> + var(<span class="math inline">\(p_k\)</span>)) - <span class="math inline">\(E[X]^2\)</span></p>
+<p>Var(X) = 2pq + 2 var(<span class="math inline">\(p_k\)</span>)</p>
+</div>
+</div>
+<div id="chapter-4" class="section level1">
+<h1>Chapter 4</h1>
+<div id="problem-1-1" class="section level2">
+<h2>Problem 1</h2>
+<p><span class="math display">\[\lambda_s = \frac{P(Y_1~=~1, Y_2~=~1)}{P(Y_1~=~1)^2}\]</span></p>
+<p><span class="math inline">\(P(Y_1 = 1)\)</span> = <span class="math inline">\((1-p)^4\)</span></p>
+<p><span class="math inline">\(P(dd, dd) = \frac{\frac{1}{16}4p^2(1-p)^2+\frac{1}{4}4p(1-p)^3+(1-p)^4}{(1-p)^4}\)</span></p>
+<p><span class="math inline">\(P(dd, dd) = \frac{1}{4}p^2 - p + 1 = (\frac{1}{2}p - 1)^2\)</span></p>
+</div>
+<div id="problem-2-1" class="section level2">
+<h2>Problem 2</h2>
+<p><span class="math inline">\(Cov(Y_1, Y_2) = P(Y_1 = Y_2 = 1) - K^2\)</span></p>
+<p><span class="math inline">\(P(Y_1 = Y_2 = 1) - K^2 = P(Y_1 = 1, Y_2 = 1) - [f_0(1-p)^2 + f_12p(1-p) + f_2p^2]^2\)</span></p>
+<p><span class="math inline">\(P(Y_1 = 1, Y_2 = 1) = P(Y_1 = 1)P(Y_2 = 1)\)</span></p>
+</div>
+<div id="problem-3" class="section level2">
+<h2>Problem 3</h2>
+<p>We might expect dizygotic twins to have the same recurrence risk as siblings, because they</p>
+<p>are genetically unique. However, they share the same conditions in the womb and this may contribute</p>
+<p>to the observed relative risk in dizygotic twins bigger than that for siblings.</p>
+</div>
+<div id="problem-4-2" class="section level2">
+<h2>Problem 4</h2>
+</div>
+<div id="problem-7" class="section level2">
+<h2>Problem 7</h2>
+</div>
+<div id="problem-8-1" class="section level2">
+<h2>Problem 8</h2>
+</div>
+<div id="problem-11" class="section level2">
+<h2>Problem 11</h2>
+<ol style="list-style-type: lower-alpha">
+<li><p>At least one parent had the dominant allele.</p></li>
+<li><p>Autosomal dominant traits can skip a generation if the parents are both heterozygous.</p></li>
+<li><p>The children of two parents with autosomal recessive traits will have the recessive trait.</p></li>
+<li><p>An autosomal recessive trait cannot skip a generation unless one of the parents has the dominant trait.</p></li>
+<li><p>The children will inherit at least one recessive allele from that parent.</p></li>
+</ol>
+</div>
+<div id="problem-12" class="section level2">
+<h2>Problem 12</h2>
+<p>Pedigree A: dominant, not recessive because 7 and 8 would have all recessive offspring.</p>
+<p>Pedigree B: recessive, not dominant, because 3 and 4 would have homozygotic offspring since a dominant allele will cause disease in all carriers, and neither parent is a carrier in 3 and 4.</p>
+<p>Pedigree C: recessive, not dominant, because carriers would have the disease and thus 3 and 4 would be monozygotic.</p>
+<p>Pedigree D: dominant or recessive</p>
+<p>Pedigree E: recessive, not dominant, because 13 and 14 would have no recessive dominant allele to pass to 20.</p>
+<p>Pedigree F: neither, because 3 and 4 would have all recessive alleles in the recessive model, while 6 and 7 would have all recessive alleles in the dominant model.</p>
+</div>
 </div>
 
 
