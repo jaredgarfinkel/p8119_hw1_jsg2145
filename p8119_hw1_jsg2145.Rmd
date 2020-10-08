@@ -87,13 +87,15 @@ with the disease only produces the disease phenotype in 1/2 of those with 2 vari
 
 Penetrance functions allow for differences in mean and variance as a function of genotype.
 
+$f(y|\mu_G, \sigma_G^2)$
+
 # Chapter 3
 
 ## Problem 1
 
 p = $$\frac{2n_{AA}+n_{Aa}}{2n}$$
 
-var(p) = $$\frac{pq}{2n}$$
+var($\hat{p}$) = $$\frac{pq}{2n}$$
 
 ## Problem 2
 
@@ -127,7 +129,7 @@ F = 0.2
 
 Assuming p is the probability of the recessive allele, the expected number of indiviuals with this disease will be $0.2*0.0001+(1-0.2)*0.0001^2$
 
-= `r 0.2*0.0001+0.8*0.0001^2` ~ 0.00002
+= `r (0.2*0.0001+0.8*0.0001^2)*10^6` = 20.008 ~ 21
 
 ## Problem 10
 
@@ -175,11 +177,45 @@ $P(dd, dd) = \frac{1}{4}p^2 - p + 1 = (\frac{1}{2}p - 1)^2$
 
 ## Problem 2
 
+### Part a
+
+Prove:
+
 $Cov(Y_1, Y_2) = P(Y_1 = Y_2 = 1) - K^2$
 
-$P(Y_1 = Y_2 = 1) - K^2 = P(Y_1 = 1, Y_2 = 1) - [f_0(1-p)^2 + f_12p(1-p) + f_2p^2]^2$
+Definitions:
 
-$P(Y_1 = 1, Y_2 = 1) = P(Y_1 = 1)P(Y_2 = 1)$
+$K = P(Y_1 = 1) = P(Y_2 = 1)$
+
+$Cov(X, Y) = E[XY] - E[X]E[Y]$
+
+$P(Y_1 = Y_2 = 1) - K^2 = P(Y_1 = 1,~Y_2 = 1) - P(Y_1 = 1)P(Y_2 = 1)$
+
+$E[Y_i] = 1 * P(Y_{i1} = 1) + 0 * P(Y_{i0} = 0) = P(Y_{i1} = 1)$
+
+Therefore, 
+
+$Cov(Y_1, Y_2) = P(Y_1 = Y_2 = 1) - K^2$
+
+### Part b
+
+Express $\lambda_R$ as a function of covariance and K
+
+$\lambda_R = P(Y_2 = 1 | Y_1 = 1)/K$
+
+Definitions:
+
+$P(A|B) = P(B|A)P(A)/P(B)$
+
+Then,
+
+$P(Y_2 = 1 | Y_1 = 1) = P(Y_2 = 1, Y_1 = 1)/P(Y_1 = 1)$
+
+$P(Y_2 = 1, Y_1 = 1) = Cov(Y_1, Y_2) + K^2$
+
+So,
+
+$\lambda_R = \frac{Cov(Y_1,~Y_2) + K^2}{K^2}$
 
 ## Problem 3
 
@@ -189,11 +225,37 @@ are genetically unique. However, they share the same conditions in the womb and 
 
 to the observed relative risk in dizygotic twins bigger than that for siblings.
 
-## Problem 4
-
 ## Problem 7
 
+Given:
+
+$h^2 = V_A/Var(Y) = 2\rho$
+
+$X_1 = X_2$
+
+$M = 1$
+
+Definition:
+
+$\rho_{XY} = \sigma_{XY}/\sigma_{X}\sigma_{Y}$
+
+$Cov(Y_O, Y_P) = V_A/2$
+
+Further, for identical twins, 
+
+$\sigma_{X} = \sigma_{Y}$
+
+So,
+
+$\rho_{XY} = Cov(Y_P,Y_O)/Var(Y_P) = \frac{1}{2}V_A/Var(Y_P)$
+
+Therefore, the heritability, $h^2$ = $\frac{1}{2}2\rho = \rho$
+
 ## Problem 8
+
+Find the heritability of a trait in identical twins with a correlation of 0.8.
+
+Since $h^2 = \rho$ in identical twins, the heritability of the trait is 0.8.
 
 ## Problem 11
 
@@ -213,10 +275,10 @@ Pedigree A: dominant, not recessive because 7 and 8 would have all recessive off
 
 Pedigree B: recessive, not dominant, because 3 and 4 would have homozygotic offspring since a dominant allele will cause disease in all carriers, and neither parent is a carrier in 3 and 4.
 
-Pedigree C: recessive, not dominant, because carriers would have the disease and thus 3 and 4 would be monozygotic.
+Pedigree C: recessive, not dominant, because carriers would have the disease and thus 3 and 4 would be homozygotic.
 
 Pedigree D: dominant or recessive
 
-Pedigree E: recessive, not dominant, because 13 and 14 would have no recessive dominant allele to pass to 20.
+Pedigree E: recessive, not dominant, because 13 and 14 would have no dominant allele to pass to 20.
 
 Pedigree F: neither, because 3 and 4 would have all recessive alleles in the recessive model, while 6 and 7 would have all recessive alleles in the dominant model.
